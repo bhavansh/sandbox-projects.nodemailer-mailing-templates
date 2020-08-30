@@ -1,4 +1,5 @@
 
+// Make sure to enable less secure apps in gmail
 
 require('dotenv').config();
 
@@ -29,7 +30,7 @@ ejs.renderFile(path.join(__dirname,'views','test.ejs'), function (err, data) {
     } else {
         let mailOptions = {
             from: 'abc@gmail.com', //  email sender
-            to: 'xyz@gmail.com',
+            to: 'xyz@gmail.com', // email receiver
             cc: 'abcxyz@gmail.com', // email receiver
             subject: 'Nodemailer - Test',
             text: 'Wooohooo it works!!',
